@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Tails\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Tails\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Space Invaders.-1944841159.00" t="ExcludeRecursive" />
+    <e p="D:\UnityGames\SpaceShooter\Space-Invaders\Space Invaders" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Scripts" t="Include">
+          <e p="Menu.cs" t="Include" />
+          <e p="Storage.cs" t="Include" />
+        </e>
+        <e p="Sprites" t="Include">
+          <e p="Interface" t="Include">
+            <e p="uipack-space" t="Include">
+              <e p="license.txt" t="Include" />
+              <e p="Spritesheet" t="Include">
+                <e p="uipackSpace_sheet.xml" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Space Invaders.sln" t="IncludeFlat" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
