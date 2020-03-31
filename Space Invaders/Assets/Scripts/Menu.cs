@@ -10,6 +10,8 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
+
+    public GameObject ShopMenu;
     void Awake()
     {
        
@@ -22,7 +24,7 @@ public class Menu : MonoBehaviour
 
     public void OpenShop()
     {
-        
+        ShopMenu.SetActive(true);
     }
 
     public void ExitGame()
