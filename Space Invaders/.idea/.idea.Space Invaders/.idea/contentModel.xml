@@ -9,15 +9,13 @@
         <e p="Scripts" t="Include">
           <e p="Menu.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
+          <e p="ShootingScript.cs" t="Include" />
           <e p="Storage.cs" t="Include" />
         </e>
         <e p="Sprites" t="Include">
           <e p="Interface" t="Include">
             <e p="uipack-space" t="Include">
               <e p="license.txt" t="Include" />
-              <e p="Spritesheet" t="Include">
-                <e p="uipackSpace_sheet.xml" t="Include" />
-              </e>
             </e>
           </e>
         </e>
