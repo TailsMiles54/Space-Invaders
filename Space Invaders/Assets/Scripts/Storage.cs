@@ -8,14 +8,12 @@ using UnityEngine;
 
 public class Storage : MonoBehaviour
 {
-    
     [System.Serializable]
     public struct Ships
     {
         public string name;
         public float Cost;
         public float unlock;
-
         public Ships(string namec, float Costc)
         {
             name = namec;
@@ -23,11 +21,6 @@ public class Storage : MonoBehaviour
             unlock = 0;
         }
     }
-
     public Ships[] PlayerShips;
-    
-    public void Awake()
-    {
-        
-    }
+    //буду юзать когда будет магаз, пока нахрен не нужно
 }

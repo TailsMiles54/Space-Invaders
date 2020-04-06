@@ -13,13 +13,11 @@ public class BulletScript : MonoBehaviour
         rb.useGravity = false;
         start = gameObject.transform.position;
     }
-
     void FixedUpdate()
     {
         GetComponent<Rigidbody>().AddForce(Vector2.up * bulletspeed,ForceMode.VelocityChange);
         end = gameObject.transform.position;
     }
-    
     void OnBecameInvisible()
     {
         Destroy(gameObject);

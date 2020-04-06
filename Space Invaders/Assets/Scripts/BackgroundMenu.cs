@@ -8,5 +8,4 @@ public class BackgroundMenu : MonoBehaviour
     {
         DontDestroyOnLoad(this);
     }
-
 }
