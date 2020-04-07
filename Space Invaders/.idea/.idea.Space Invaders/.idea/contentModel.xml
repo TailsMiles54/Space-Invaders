@@ -9,6 +9,7 @@
         <e p="Scripts" t="Include">
           <e p="BackgroundMenu.cs" t="Include" />
           <e p="BulletScript.cs" t="Include" />
+          <e p="GameUI.cs" t="Include" />
           <e p="Menu.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
           <e p="ShootingScript.cs" t="Include" />
@@ -16,6 +17,11 @@
         </e>
         <e p="Sprites" t="Include">
           <e p="Interface" t="Include">
+            <e p="pack 2" t="Include">
+              <e p="Spritesheet" t="Include">
+                <e p="uipack_rpg_sheet.xml" t="Include" />
+              </e>
+            </e>
             <e p="uipack-space" t="Include">
               <e p="license.txt" t="Include" />
             </e>

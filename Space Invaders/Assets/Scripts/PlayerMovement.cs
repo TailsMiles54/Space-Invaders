@@ -7,10 +7,11 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField]
     float _velocity = 10;
+    
+    float moveSpeed = 0.2f;
 
     void Update()
     {
-        float moveSpeed = 0.2f;
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
         transform.Translate(new Vector3(horizontalInput, verticalInput, 0) * moveSpeed);
