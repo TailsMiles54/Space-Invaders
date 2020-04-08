@@ -11,13 +11,13 @@ public class GameUI : MonoBehaviour
     public Text UIHealth;
     public Text UIScore;
 
-    [HideInInspector] public float Level;
-    [HideInInspector] public float Health;
-    [HideInInspector] public float Score;
+    [HideInInspector] public float Level = 1;
+    [HideInInspector] public float Health = 5;
+    [HideInInspector] public float Score = 1;
 
     void Awake()
     {
-        UIUpdate();
+        
     }
 
     private void FixedUpdate()
