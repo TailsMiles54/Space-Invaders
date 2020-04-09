@@ -15,11 +15,6 @@ public class GameUI : MonoBehaviour
     [HideInInspector] public float Health = 5;
     [HideInInspector] public float Score = 1;
 
-    void Awake()
-    {
-        
-    }
-
     private void FixedUpdate()
     {
         UIUpdate();
@@ -30,5 +25,10 @@ public class GameUI : MonoBehaviour
         UILevel.text = "Level: " + Level;
         UIHealth.text = "Health: " + Health;
         UIScore.text = "Score: " + Score;
+    }
+
+    public void KillEnemy()
+    {
+        
     }
 }

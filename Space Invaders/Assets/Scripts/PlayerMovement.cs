@@ -18,9 +18,9 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
-        transform.Translate(new Vector3(horizontalInput, verticalInput, 0) * moveSpeed);
+        float horizontalInput = Input.GetAxis("Horizontal");        //для теста на ПК
+        float verticalInput = Input.GetAxis("Vertical");        //для теста на ПК
+        transform.Translate(new Vector3(horizontalInput, verticalInput, 0) * 0.2f);     //для теста на ПК
         
         if(Input.touchCount > 0)
         {

@@ -20,7 +20,6 @@ public class ShootingScript : MonoBehaviour
         audio.PlayOneShot(piu); //звук выстрела
         var asdf = Instantiate(bullets[22]);                //спавн снаряда
         asdf.transform.position = gameObject.transform.position;                //спавн снаряда
-        asdf.AddComponent<Rigidbody>();             //спавн снаряда
         asdf.AddComponent<BulletScript>();              //спавн снаряда
     }
 }
