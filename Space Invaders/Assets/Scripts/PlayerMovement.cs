@@ -1,14 +1,20 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.PlayerLoop;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField]
-    float _velocity = 10;
+    [SerializeField]float moveSpeed = 3;
+
+    [HideInInspector]public Vector2 targetPos;
     
-    float moveSpeed = 0.2f;
+    void Start()
+    {
+        targetPos = transform.position;
+    }
 
     void Update()
     {
@@ -16,9 +22,12 @@ public class PlayerMovement : MonoBehaviour
         float verticalInput = Input.GetAxis("Vertical");
         transform.Translate(new Vector3(horizontalInput, verticalInput, 0) * moveSpeed);
         
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        if(Input.touchCount > 0)
         {
-            transform.position = Vector3.MoveTowards(transform.position, Input.touches[0].position, Time.deltaTime * _velocity);
+            Touch touch = Input.GetTouch(0);
+            targetPos = Camera.main.ScreenToWorldPoint(touch.position);
+            transform.position = Vector2.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
         }
+        transform.position = Vector2.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
     }
 }
