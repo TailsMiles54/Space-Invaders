@@ -14,7 +14,8 @@ public class EnemyMovement : MonoBehaviour
         var rb = GetComponent<Rigidbody>();
         rb.useGravity = false;
         speed = 0.1f;
-        GameUI = GameObject.FindWithTag("GameUI").GetComponent<GameUI>();
+        GameUI = GameObject.FindWithTag("GameUI").GetComponent<GameUI>(); // надо убрать будет поиск и сделать иначе, или хотя бы не спавнить врагов а выдергивать из пула
+        
     }
     void FixedUpdate()
     {
@@ -27,6 +28,7 @@ public class EnemyMovement : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
+        GameUI.Score += 1;
         Destroy(gameObject);
         Destroy(other.gameObject);
     }
