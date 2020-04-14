@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.PlayerLoop;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameUI : MonoBehaviour
@@ -10,15 +11,13 @@ public class GameUI : MonoBehaviour
     public Text UILevel;
     public Text UIHealth;
     public Text UIScore;
+    public Text LoseScore;
 
-    [HideInInspector] public float Level = 1;
-    [HideInInspector] public float Health = 5;
-    [HideInInspector] public float Score = 1;
+    public GameObject LosePanel;
 
-    private void FixedUpdate()
-    {
-        UIUpdate();
-    }
+    public float Level = 1;
+    public float Health = 5;
+    public float Score = 1;
 
     public void UIUpdate()
     {
@@ -27,8 +26,15 @@ public class GameUI : MonoBehaviour
         UIScore.text = "Score: " + Score;
     }
 
-    public void KillEnemy()
+    public void Back()
     {
-        
+        SceneManager.LoadScene("Menu");
+    }
+
+    public void Lose()
+    {
+        Time.timeScale = 0;
+        LoseScore.text = "Score: " + Score;
+        LosePanel.SetActive(true);
     }
 }

@@ -10,7 +10,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]float moveSpeed = 3;
 
     [HideInInspector]public Vector2 targetPos;
-    
+
+    private void Awake()
+    {
+        Time.timeScale = 1;
+    }
+
     void Start()
     {
         targetPos = transform.position;

@@ -48,7 +48,7 @@ TagManager:
   - name: Background
     uniqueID: 2012143031
     locked: 0
-  - name: Bullet
+  - name: Bullet + Enemy
     uniqueID: 3056593171
     locked: 0
   - name: Player
