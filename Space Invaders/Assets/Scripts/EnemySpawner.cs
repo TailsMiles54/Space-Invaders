@@ -24,8 +24,8 @@ public class EnemySpawner : MonoBehaviour
             GameUI.UIUpdate();
             for (int i = 0; i < 10; i++) {
                         GameObject EnemySpawned = Instantiate(Enemys1[Random.Range(0,3)]);
-                        EnemySpawned.transform.position = Waypoints[Random.Range(0,3)].transform.position;
-                        EnemySpawned.transform.localScale = new Vector3(0.75f,0.75f);
+                        EnemySpawned.transform.position = Waypoints[Random.Range(0,Waypoints.Length)].transform.position;
+                        EnemySpawned.transform.localScale = new Vector3(0.5f,0.5f,0.5f);
                         EnemySpawned.GetComponent<SpriteRenderer>().sortingLayerName = "Bullet + Enemy";
                         yield return new WaitForSeconds(.5f);
             }

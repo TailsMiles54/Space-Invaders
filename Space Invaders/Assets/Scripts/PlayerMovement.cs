@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         Time.timeScale = 1;
+        gameObject.transform.localScale = new Vector3(0.75f,0.75f,0.75f);
     }
 
     void Start()
