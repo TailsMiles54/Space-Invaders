@@ -1862,45 +1862,70 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerShips:
-  - name: 
-    Cost: 50
-    unlock: 0
-  - name: 
-    Cost: 100
-    unlock: 0
-  - name: 
-    Cost: 250
-    unlock: 0
-  - name: 
-    Cost: 500
-    unlock: 0
-  - name: 
-    Cost: 750
-    unlock: 0
-  - name: 
-    Cost: 500
-    unlock: 0
+  - name: "\u041F\u0435\u0440\u0432\u044B\u0439"
+    Cost: 0
+    unlock: 1
+    Prefab: {fileID: 3425970012430748847, guid: f0c64325fe9e355419ee1e6a93ca24b4,
+      type: 3}
   - name: 
     Cost: 1000
     unlock: 0
+    Prefab: {fileID: 763608552085779728, guid: 4965832845185a447b8014e3af7a4533, type: 3}
   - name: 
-    Cost: 2000
+    Cost: 2500
     unlock: 0
-  - name: 
-    Cost: 3000
-    unlock: 0
+    Prefab: {fileID: 1053711509438087224, guid: f18a5dc276de4c042866302293a3cc51,
+      type: 3}
   - name: 
     Cost: 5000
     unlock: 0
+    Prefab: {fileID: 7740669615417488153, guid: 92aaea145f833564e9cebe93d9711220,
+      type: 3}
   - name: 
     Cost: 10000
     unlock: 0
+    Prefab: {fileID: 180053802977172703, guid: 09a8fc7640ca4f348a158b7631b0892b, type: 3}
   - name: 
     Cost: 15000
     unlock: 0
+    Prefab: {fileID: 5378042918893594327, guid: 63867641a2b517442897c3132d9f294b,
+      type: 3}
+  - name: 
+    Cost: 20000
+    unlock: 0
+    Prefab: {fileID: 8598449709991745291, guid: e7021a5631d99f64f996fd3ba4c0e5f2,
+      type: 3}
   - name: 
     Cost: 25000
     unlock: 0
+    Prefab: {fileID: 6995593207080356963, guid: 6c45a4d3fbb8bd74e96213064fa189ac,
+      type: 3}
+  - name: 
+    Cost: 40000
+    unlock: 0
+    Prefab: {fileID: 6604431062634314289, guid: ed3b16e2a9689a74ebece7b052914ebb,
+      type: 3}
+  - name: 
+    Cost: 75000
+    unlock: 0
+    Prefab: {fileID: 9054470041154021639, guid: 76c3c88e1d6d49c4f85e39fe580084c9,
+      type: 3}
+  - name: 
+    Cost: 100000
+    unlock: 0
+    Prefab: {fileID: 5514812494090886776, guid: 7d171522a24e09442a6bb4024b0ca9d5,
+      type: 3}
+  - name: 
+    Cost: 150000
+    unlock: 0
+    Prefab: {fileID: 6588146966813744286, guid: 9166115c9f2f2714db1e25f92842dbba,
+      type: 3}
+  - name: 
+    Cost: 250000
+    unlock: 0
+    Prefab: {fileID: 3114352323380792673, guid: 53d1c7782b049e64ca69ed733574fe40,
+      type: 3}
+  _unl: 
 --- !u!4 &1645261777
 Transform:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@
           <e p="BulletScript.cs" t="Include" />
           <e p="EnemyMovement.cs" t="Include" />
           <e p="EnemySpawner.cs" t="Include" />
+          <e p="GameManager.cs" t="Include" />
           <e p="GameUI.cs" t="Include" />
           <e p="Menu.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
