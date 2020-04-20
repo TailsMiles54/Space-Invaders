@@ -8,7 +8,7 @@ using UnityEngine;
 
 public class Storage : MonoBehaviour
 {
-    [System.Serializable]
+    [Serializable]
     public struct Ships
     {
         public string name;
@@ -23,37 +23,36 @@ public class Storage : MonoBehaviour
             Prefab = Prefabc;
         }
     }
+
     public Ships[] PlayerShips;
+    
     //буду юзать когда будет магаз, пока нахрен не нужно
 
-    [Serializable]
-    class MyClass
-    {
-        public List<bool> _unl; //чел посоветовал это засунуть в класс, но тогда ниже ошибки, надо попробовать обращаться через другой класс
-    }
-
-    
     public void Start()
     {
         SaveShips();
-        LoadShips();
     }
 
     void SaveShips()
     {
-        for (int i = 0; i < PlayerShips.Length; i++)
-        {
-            _unl.Insert(i, PlayerShips[i].unlock);
-        }
-
-        string ToJSONShips = JsonUtility.ToJson(_unl); 
+        string ToJSONShips = JsonUtility.ToJson(PlayerShips); 
         PlayerPrefs.SetString("PlayerShips", ToJSONShips);
+        
+        Debug.Log(this);
+        Debug.Log(ToJSONShips);
         File.WriteAllText(@"C:\Users\Tails\Desktop\MyTest.txt", ToJSONShips); //
     }
 
     void LoadShips()
     {
         string FromJSONShips = PlayerPrefs.GetString("PlayerShips");
-        _unl = JsonUtility.FromJson<List<bool>>(FromJSONShips);
+        Debug.Log(FromJSONShips);
+        PlayerShips = JsonUtility.FromJson<Ships[]>(FromJSONShips);
+    }
+
+    public void Test()
+    {
+        SaveShips();
+        LoadShips();
     }
 }
