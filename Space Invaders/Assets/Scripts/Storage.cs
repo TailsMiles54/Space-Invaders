@@ -27,7 +27,14 @@ public class Storage : MonoBehaviour
 
     public void Start()
     {
-        SaveShips();
+        if (PlayerPrefs.HasKey("PlayerShips"))
+        {
+            LoadShips();
+        }
+        else
+        {
+            SaveShips();
+        }
     }
 
     void SaveShips()
@@ -42,12 +49,6 @@ public class Storage : MonoBehaviour
         string FromJSONShips = PlayerPrefs.GetString("PlayerShips");
         Debug.Log(FromJSONShips);
         PlayerShips = JsonConvert.DeserializeObject<Ships[]>(FromJSONShips);
-    }
-
-    public void Test()
-    {
-        SaveShips();
-        LoadShips();
     }
 }
 // Пытаюсь сделать хранение кулпенных игроком кораблей
