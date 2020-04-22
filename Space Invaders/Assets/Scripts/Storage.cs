@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System;
 using System.IO;
 using System.Text;
+using Newtonsoft.Json;
 using UnityEditor;
 using UnityEngine;
 
@@ -13,14 +14,12 @@ public class Storage : MonoBehaviour
     {
         public string name;
         public float Cost;
-        public bool unlock;
-        public GameObject Prefab; 
-        public Ships(string namec, float Costc, GameObject Prefabc)
+        public bool unlock; 
+        public Ships(string namec, float Costc)
         {
             name = namec;
             Cost = Costc;
             unlock = false;
-            Prefab = Prefabc;
         }
     }
 
@@ -33,7 +32,7 @@ public class Storage : MonoBehaviour
 
     void SaveShips()
     {
-        string ToJSONShips = JsonUtility.ToJson(PlayerShips); 
+        string ToJSONShips = JsonConvert.SerializeObject(PlayerShips);
         PlayerPrefs.SetString("PlayerShips", ToJSONShips);
         Debug.Log(ToJSONShips);
     }
@@ -42,7 +41,7 @@ public class Storage : MonoBehaviour
     {
         string FromJSONShips = PlayerPrefs.GetString("PlayerShips");
         Debug.Log(FromJSONShips);
-        PlayerShips = JsonUtility.FromJson<Ships[]>(FromJSONShips);
+        PlayerShips = JsonConvert.DeserializeObject<Ships[]>(FromJSONShips);
     }
 
     public void Test()
