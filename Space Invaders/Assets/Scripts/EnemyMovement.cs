@@ -65,3 +65,4 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 }
+// движение противинка + столкновение с игроком и пулей

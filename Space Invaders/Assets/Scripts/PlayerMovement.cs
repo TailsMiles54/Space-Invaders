@@ -37,3 +37,5 @@ public class PlayerMovement : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
     }
 }
+
+//движение игрока

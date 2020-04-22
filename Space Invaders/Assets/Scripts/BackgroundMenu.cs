@@ -11,3 +11,4 @@ public class BackgroundMenu : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 }
+// чтобы не делать новый фон на каждой сцене, пока оставляю фон из менюхи

@@ -38,3 +38,5 @@ public class GameUI : MonoBehaviour
         LosePanel.SetActive(true);
     }
 }
+
+// UI в игре

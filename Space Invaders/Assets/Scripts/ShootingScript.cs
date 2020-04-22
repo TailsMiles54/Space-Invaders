@@ -23,3 +23,4 @@ public class ShootingScript : MonoBehaviour
         asdf.AddComponent<BulletScript>();              //спавн снаряда
     }
 }
+//скрипт создание выстрела

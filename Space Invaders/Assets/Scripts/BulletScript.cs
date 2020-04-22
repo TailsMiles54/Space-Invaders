@@ -20,3 +20,4 @@ public class BulletScript : MonoBehaviour
         Destroy(gameObject);
     }
 }
+// движение пули

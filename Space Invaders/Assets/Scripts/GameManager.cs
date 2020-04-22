@@ -15,3 +15,4 @@ public class GameManager : MonoBehaviour
         Player.AddComponent<PlayerMovement>();
     }
 }
+// будет нужно когда доделаю магаз

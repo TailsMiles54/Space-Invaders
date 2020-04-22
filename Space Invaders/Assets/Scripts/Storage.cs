@@ -25,8 +25,6 @@ public class Storage : MonoBehaviour
     }
 
     public Ships[] PlayerShips;
-    
-    //буду юзать когда будет магаз, пока нахрен не нужно
 
     public void Start()
     {
@@ -37,10 +35,7 @@ public class Storage : MonoBehaviour
     {
         string ToJSONShips = JsonUtility.ToJson(PlayerShips); 
         PlayerPrefs.SetString("PlayerShips", ToJSONShips);
-        
-        Debug.Log(this);
         Debug.Log(ToJSONShips);
-        File.WriteAllText(@"C:\Users\Tails\Desktop\MyTest.txt", ToJSONShips); //
     }
 
     void LoadShips()
@@ -56,3 +51,4 @@ public class Storage : MonoBehaviour
         LoadShips();
     }
 }
+// Пытаюсь сделать хранение кулпенных игроком кораблей
