@@ -19,6 +19,7 @@
           <e p="Menu.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
           <e p="ShootingScript.cs" t="Include" />
+          <e p="Shop.cs" t="Include" />
           <e p="Storage.cs" t="Include" />
         </e>
         <e p="Sprites" t="Include">
