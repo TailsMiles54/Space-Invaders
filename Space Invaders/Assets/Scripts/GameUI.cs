@@ -13,7 +13,7 @@ public class GameUI : MonoBehaviour
     public Text UIScore;
     public Text LoseScore;
 
-    public GameObject LosePanel;
+    public GameObject LosePanel,PausePanel;
 
     public float Level = 1;
     public float Health = 5;
@@ -28,6 +28,7 @@ public class GameUI : MonoBehaviour
 
     public void Back()
     {
+        SaveMoney();
         SceneManager.LoadScene("Menu");
     }
 
@@ -36,6 +37,25 @@ public class GameUI : MonoBehaviour
         Time.timeScale = 0;
         LoseScore.text = "Score: " + Score;
         LosePanel.SetActive(true);
+    }
+
+    public void PausePanelActive()
+    {
+        Time.timeScale = 0;
+        PausePanel.SetActive(true);
+    }
+
+    public void PausePanelDeactive()
+    {
+        Time.timeScale = 1;
+        PausePanel.SetActive(false);
+    }
+
+    public void SaveMoney()
+    {
+        float LoadScore = PlayerPrefs.GetFloat("PlayerMoney");
+        PlayerPrefs.SetFloat("PlayerMoney",LoadScore + Score);
+        PlayerPrefs.Save();
     }
 }
 

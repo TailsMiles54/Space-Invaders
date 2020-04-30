@@ -10,9 +10,9 @@ public class GameManager : MonoBehaviour
 
     public void Start()
     {
-        GameObject Player = Instantiate(PlayerShip);
+        /*GameObject Player = Instantiate(PlayerShip);
         Player.transform.position = Startpos;
-        Player.AddComponent<PlayerMovement>();
+        Player.AddComponent<PlayerMovement>();*/
     }
 }
 // будет нужно когда доделаю магаз
